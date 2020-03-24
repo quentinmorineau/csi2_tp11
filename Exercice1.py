@@ -11,10 +11,8 @@ class Circle:
     def __lt__(self, c1):
        return self.__r < c1.__r
 
-
     def __gt__(self, c1):
         return self.__r > c1.__r
-
 
 if __name__ == '__main__':
     c1 = Circle(2)
