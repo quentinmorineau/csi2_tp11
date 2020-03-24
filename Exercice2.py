@@ -21,7 +21,7 @@ class Complex :
     def __truediv__(self, c1):
         return Complex(self.__r / c1.__r, self.__i / c1.__i)
 
-    def __floordiv__(self, c1):
+    def __abs____(self, c1):
         return Complex(self.__r / c1.__r, self.__i / c1.__i)
 
     def __eq__(self,c1):
@@ -39,7 +39,7 @@ if __name__ =='__main__':
     c5 = c1 * c2
     c6 = c1 / c2
     print(c3,c4,c5,c6)
-    print(isinstance(c1,Complex))
+
 
 
 
