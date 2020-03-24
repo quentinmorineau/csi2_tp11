@@ -23,3 +23,4 @@ if __name__ == '__main__':
     c4 = c1 < c2
     c5 = c2 > c3
     print(c5)
+    print(isinstance(c1,Circle))
