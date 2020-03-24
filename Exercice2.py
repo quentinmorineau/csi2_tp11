@@ -21,14 +21,14 @@ class Complex :
     def __truediv__(self, c1):
         return Complex(self.__r / c1.__r, self.__i / c1.__i)
 
-    def __abs____(self, c1):
-        return Complex(self.__r / c1.__r, self.__i / c1.__i)
+    def __abs__(self):
+        return (((self.__r)**2)+((self.__i)**2))**0.5
 
     def __eq__(self,c1):
-        return Complex(self.__r == c1.__r, self.__i == c1.__i)
+        return self.__r == c1.__r and self.__i == c1.__i
 
     def __ne__(self,c1):
-        return Complex(self.__r != c1.__r, self.__i != c1.__i)
+        return self.__r != c1.__r or self.__i != c1.__i
 
 
 if __name__ =='__main__':
@@ -38,7 +38,10 @@ if __name__ =='__main__':
     c4 = c1 - c2
     c5 = c1 * c2
     c6 = c1 / c2
-    print(c3,c4,c5,c6)
+    c7 = abs(c1)
+    c8 = c1 == c2
+    c9 = c1 != c2
+    print(c3,c4,c5,c6,c7,c8,c9)
 
 
 
