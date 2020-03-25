@@ -32,6 +32,11 @@ class Rational:
             num2 = self.__d * r1.__n
             return num1 < num2
 
+    def __truediv__(self, r1):
+        newNum = self.__n * r1.__d
+        newDen = self.__d * r1.__n
+        return str(newNum)+"/"+str(newDen)
+
 if __name__ == '__main__':
     r1 = Rational(4,5)
     r2 = Rational(3,8)
@@ -39,5 +44,6 @@ if __name__ == '__main__':
     r4 = r1 - r2
     r5 = r1 * r2
     r6 = r1 < r2
-    print(r3,r4,r5,r6)
+    r7 = r1 / r2
+    print(r3,r4,r5,r6,r7)
     print(isinstance(r2,Rational))
